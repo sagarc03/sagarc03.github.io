@@ -1,10 +1,12 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
 
-import sitemap from '@astrojs/sitemap';
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sagarc03.github.io',
-  integrations: [mdx(), sitemap()],
+  site: "https://sagarc03.github.io",
+  integrations: [mdx(), sitemap(), tailwind(), icon()],
 });
